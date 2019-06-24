@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 const AppDescription = props => {
   return (
     <Fragment>
-      <p>
+      <p data-test="description">
         List the items in your favourite recipes and we will provide the
         nutritional information. You can enter either quantity or weight for
         each item. (ie. 4 carrots or 300 grams of carrots)
       </p>
-      <p>
+      <p data-test="descPtTwoWithButton">
         Please also provide the number of portions your recipe produces.
         <span style={{ float: 'right' }}>
           <button
             type="button"
             onClick={props.resetAll}
             className="btn btn-danger"
+            data-test="removeAll"
           >
             Remove All Items
           </button>
