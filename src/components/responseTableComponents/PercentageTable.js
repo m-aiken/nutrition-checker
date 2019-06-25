@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const PercentageTable = props => {
   return (
-    <table className="table percentage-table">
+    <table className="table percentage-table" data-test="percentageTable">
       <thead className="thead-dark">
         <tr>
           <th scope="col">Nutrient</th>

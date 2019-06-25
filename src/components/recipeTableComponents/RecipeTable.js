@@ -17,7 +17,7 @@ class RecipeTable extends Component {
   render() {
     return (
       <Fragment>
-        <table className="table recipe-table">
+        <table className="table recipe-table" data-test="recipeTable">
           <thead className="thead-dark">
             <tr>
               <th scope="col">
@@ -57,7 +57,7 @@ class RecipeTable extends Component {
             ))}
           </tbody>
         </table>
-        <div className="btn-group-justified">
+        <div className="btn-group-justified" data-test="recipeAddSubmitButtons">
           <AddItemButton addIngredientInput={this.props.addIngredientInput} />
           <SubmitButton submitRecipe={this.props.submitRecipe} />
         </div>

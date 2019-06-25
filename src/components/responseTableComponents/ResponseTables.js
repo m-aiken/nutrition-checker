@@ -6,7 +6,7 @@ import PercentageTable from './PercentageTable';
 
 const ResponseTables = props => {
   return (
-    <div className="response-tables">
+    <div className="response-tables" data-test="tablesContainer">
       <ValueTable nutrientQty={props.nutrientQty} portions={props.portions} />
       <PercentageTable
         dailyPercent={props.dailyPercent}

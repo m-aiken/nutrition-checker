@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 
 const SubmitButton = props => {
   return (
-    <div className="btn-group">
-      <button className="btn btn-danger" onClick={props.submitRecipe}>
+    <div className="btn-group" data-test="submitContainer">
+      <button
+        className="btn btn-danger"
+        onClick={props.submitRecipe}
+        data-test="submitButton"
+      >
         Submit
       </button>
     </div>

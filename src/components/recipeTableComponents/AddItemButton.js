@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 
 const AddItemButton = props => {
   return (
-    <div className="btn-group">
-      <button className="btn btn-primary" onClick={props.addIngredientInput}>
+    <div className="btn-group" data-test="buttonContainer">
+      <button
+        className="btn btn-primary"
+        onClick={props.addIngredientInput}
+        data-test="addItemButton"
+      >
         Add Item
       </button>
     </div>

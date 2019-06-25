@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const ValueTable = props => {
   return (
-    <table className="table">
+    <table className="table" data-test="valueTable">
       <thead className="thead-dark">
         <tr>
           <th scope="col">Nutrient</th>
