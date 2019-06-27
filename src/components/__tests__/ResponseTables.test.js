@@ -21,7 +21,9 @@ describe('ResponseTables component', () => {
   });
 
   describe('Checking PropTypes', () => {
-    const propsError = checkProps(ResponseTables, testProps);
-    expect(propsError).toBeUndefined();
+    it('Should not throw a warning', () => {
+      const propsError = checkProps(ResponseTables, testProps);
+      expect(propsError).toBeUndefined();
+    });
   });
 });

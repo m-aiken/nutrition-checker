@@ -24,7 +24,9 @@ describe('AddItemButton component', () => {
   });
 
   describe('Checking PropTypes', () => {
-    const propsError = checkProps(AddItemButton, testProps);
-    expect(propsError).toBeUndefined();
+    it('Should not throw a warning', () => {
+      const propsError = checkProps(AddItemButton, testProps);
+      expect(propsError).toBeUndefined();
+    });
   });
 });
