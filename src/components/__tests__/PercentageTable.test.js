@@ -20,7 +20,9 @@ describe('PercentageTable component', () => {
   });
 
   describe('Checking PropTypes', () => {
-    const propsError = checkProps(PercentageTable, testProps);
-    expect(propsError).toBeUndefined();
+    it('Should not throw a warning', () => {
+      const propsError = checkProps(PercentageTable, testProps);
+      expect(propsError).toBeUndefined();
+    });
   });
 });

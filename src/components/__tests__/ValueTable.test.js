@@ -20,7 +20,9 @@ describe('ValueTable component', () => {
   });
 
   describe('Checking PropTypes', () => {
-    const propsError = checkProps(ValueTable, testProps);
-    expect(propsError).toBeUndefined();
+    it('Should not throw a warning', () => {
+      const propsError = checkProps(ValueTable, testProps);
+      expect(propsError).toBeUndefined();
+    });
   });
 });

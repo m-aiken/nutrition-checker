@@ -24,7 +24,9 @@ describe('SubmitButton component', () => {
   });
 
   describe('Checking PropTypes', () => {
-    const propsError = checkProps(SubmitButton, testProps);
-    expect(propsError).toBeUndefined();
+    it('Should not throw a warning', () => {
+      const propsError = checkProps(SubmitButton, testProps);
+      expect(propsError).toBeUndefined();
+    });
   });
 });
