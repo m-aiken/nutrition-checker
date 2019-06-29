@@ -1,10 +1,7 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/testingUtilities';
 import RecipeTable from '../recipeTableComponents/RecipeTable';
 
 const testProps = {
-  portions: 'Test string',
+  portions: 'Test String',
   updatePortions: () => {},
   addIngredientInput: () => {},
   submitRecipe: () => {},
@@ -14,18 +11,18 @@ const testProps = {
 };
 
 describe('RecipeTable component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<RecipeTable {...testProps} />);
+    wrapper = shallow(<RecipeTable {...testProps} />);
   });
 
   it('Should render table without errors', () => {
-    const table = findByTestAttr(component, 'recipeTable');
+    const table = findByTestAttr(wrapper, 'recipeTable');
     expect(table.length).toBe(1);
   });
 
   it('Should render button container without errors', () => {
-    const buttonContainer = findByTestAttr(component, 'recipeAddSubmitButtons');
+    const buttonContainer = findByTestAttr(wrapper, 'recipeAddSubmitButtons');
     expect(buttonContainer.length).toBe(1);
   });
 

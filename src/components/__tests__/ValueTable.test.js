@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/testingUtilities';
 import ValueTable from '../responseTableComponents/ValueTable';
 
 const testProps = {
@@ -9,13 +6,13 @@ const testProps = {
 };
 
 describe('ValueTable component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<ValueTable {...testProps} />);
+    wrapper = shallow(<ValueTable {...testProps} />);
   });
 
   it('Should render table without errors', () => {
-    const table = findByTestAttr(component, 'valueTable');
+    const table = findByTestAttr(wrapper, 'valueTable');
     expect(table.length).toBe(1);
   });
 

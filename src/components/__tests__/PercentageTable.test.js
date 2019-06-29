@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/testingUtilities';
 import PercentageTable from '../responseTableComponents/PercentageTable';
 
 const testProps = {
@@ -9,13 +6,13 @@ const testProps = {
 };
 
 describe('PercentageTable component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<PercentageTable {...testProps} />);
+    wrapper = shallow(<PercentageTable {...testProps} />);
   });
 
   it('Should render table without errors', () => {
-    const table = findByTestAttr(component, 'percentageTable');
+    const table = findByTestAttr(wrapper, 'percentageTable');
     expect(table.length).toBe(1);
   });
 
