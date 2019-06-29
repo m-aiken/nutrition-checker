@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/testingUtilities';
 import AddItemButton from '../recipeTableComponents/AddItemButton';
 
 const testProps = {
@@ -8,18 +5,18 @@ const testProps = {
 };
 
 describe('AddItemButton component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<AddItemButton {...testProps} />);
+    wrapper = shallow(<AddItemButton {...testProps} />);
   });
 
   it('Should render div without errors', () => {
-    const btnContainer = findByTestAttr(component, 'buttonContainer');
+    const btnContainer = findByTestAttr(wrapper, 'buttonContainer');
     expect(btnContainer.length).toBe(1);
   });
 
   it('Should render button without errors', () => {
-    const button = findByTestAttr(component, 'addItemButton');
+    const button = findByTestAttr(wrapper, 'addItemButton');
     expect(button.length).toBe(1);
   });
 
