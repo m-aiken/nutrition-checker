@@ -2,8 +2,9 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 
 import AppDescription from './AppDescription';
-import RecipeTable from './recipeTableComponents/RecipeTable';
+import RecipeTable from './RecipeTable';
 import ResponseTables from './responseTableComponents/ResponseTables';
+import AddItemButton from './AddItemButton';
 
 export class RecipeComponents extends Component {
   constructor() {
@@ -15,6 +16,7 @@ export class RecipeComponents extends Component {
       nutrientQty: [],
       dailyPercent: []
     };
+    this.submitRecipe = this.submitRecipe.bind(this);
   }
 
   updatePortions = e => {
@@ -46,8 +48,7 @@ export class RecipeComponents extends Component {
     });
   };
 
-  submitRecipe = e => {
-    e.preventDefault();
+  submitRecipe() {
     const ingredientsArray = this.state.recipeText.map(item => {
       return item.item;
     });
@@ -68,7 +69,7 @@ export class RecipeComponents extends Component {
         });
       })
       .catch(err => console.log(err));
-  };
+  }
 
   resetAll = e => {
     this.setState({
@@ -91,6 +92,18 @@ export class RecipeComponents extends Component {
           updateIngredient={this.updateIngredient}
           removeIngredient={this.removeIngredient}
         />
+        <div className="btn-group-justified" data-test="recipeAddSubmitButtons">
+          <AddItemButton addIngredientInput={this.addIngredientInput} />
+          <div className="btn-group" data-test="submitContainer">
+            <button
+              className="btn btn-danger"
+              onClick={this.submitRecipe}
+              data-test="submitButton"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
         <ResponseTables
           nutrientQty={this.state.nutrientQty}
           dailyPercent={this.state.dailyPercent}

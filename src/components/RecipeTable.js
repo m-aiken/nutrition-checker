@@ -1,14 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import AddItemButton from './AddItemButton';
-import SubmitButton from './SubmitButton';
 import PropTypes from 'prop-types';
 
 class RecipeTable extends Component {
   static propTypes = {
     portions: PropTypes.string.isRequired,
     updatePortions: PropTypes.func.isRequired,
-    addIngredientInput: PropTypes.func.isRequired,
-    submitRecipe: PropTypes.func.isRequired,
     recipeText: PropTypes.array.isRequired,
     updateIngredient: PropTypes.func.isRequired,
     removeIngredient: PropTypes.func.isRequired
@@ -57,10 +53,6 @@ class RecipeTable extends Component {
             ))}
           </tbody>
         </table>
-        <div className="btn-group-justified" data-test="recipeAddSubmitButtons">
-          <AddItemButton addIngredientInput={this.props.addIngredientInput} />
-          <SubmitButton submitRecipe={this.props.submitRecipe} />
-        </div>
       </Fragment>
     );
   }
