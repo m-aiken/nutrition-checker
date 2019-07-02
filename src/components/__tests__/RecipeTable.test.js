@@ -1,10 +1,8 @@
-import RecipeTable from '../recipeTableComponents/RecipeTable';
+import RecipeTable from '../RecipeTable';
 
 const testProps = {
   portions: 'Test String',
   updatePortions: () => {},
-  addIngredientInput: () => {},
-  submitRecipe: () => {},
   recipeText: [],
   updateIngredient: () => {},
   removeIngredient: () => {}
@@ -19,11 +17,6 @@ describe('RecipeTable component', () => {
   it('Should render table without errors', () => {
     const table = findByTestAttr(wrapper, 'recipeTable');
     expect(table.length).toBe(1);
-  });
-
-  it('Should render button container without errors', () => {
-    const buttonContainer = findByTestAttr(wrapper, 'recipeAddSubmitButtons');
-    expect(buttonContainer.length).toBe(1);
   });
 
   describe('Checking PropTypes', () => {

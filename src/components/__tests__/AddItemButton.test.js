@@ -1,4 +1,4 @@
-import AddItemButton from '../recipeTableComponents/AddItemButton';
+import AddItemButton from '../AddItemButton';
 
 const testProps = {
   addIngredientInput: () => {}
