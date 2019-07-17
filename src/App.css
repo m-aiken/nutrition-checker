@@ -10,27 +10,28 @@ html {
   box-sizing: border-box;
 }
 
-.recipe-table {
-  margin-top: 3%;
+.navbar {
+  margin: 0 0 20px 0 !important;
 }
 
-table input {
-  width: 100%;
-  padding: 0.3rem;
+.navbar span {
+  font-size: 1rem;
 }
 
-.btn-group {
-  width: 48%;
-  margin: 0 1%;
+.description {
+  font-size: 0.8rem;
 }
 
-.response-tables {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 1%;
-}
+@media (min-width: 700px) {
+  .navbar {
+    margin: 0 0 48px 0 !important;
+  }
 
-.percentage-table {
-  border: 1px solid red;
-  background-color: rgba(255, 0, 0, 0.05);
+  .navbar span {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
 }

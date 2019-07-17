@@ -1,0 +1,65 @@
+.remove-all-button {
+  float: right;
+  margin: 10px 0;
+}
+
+.remove-all-button button {
+  font-size: 0.8rem;
+}
+
+.recipe-table {
+  font-size: 0.7rem;
+}
+
+.portions {
+  float: right;
+}
+
+.portions-produced {
+  display: none;
+  float: right;
+}
+
+.portion-number {
+  font-size: 0.7rem;
+}
+
+table input {
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.remove-button {
+  font-size: 0.7rem;
+}
+
+.btn-group {
+  width: 48%;
+  margin: 0 1%;
+}
+
+.btn-group button {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 700px) {
+  .remove-all-button button,
+  .recipe-table,
+  .portion-number,
+  table input,
+  .remove-button,
+  .btn-group button {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .portions {
+    display: none;
+  }
+
+  .portions-produced {
+    display: block;
+  }
+}

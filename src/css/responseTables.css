@@ -1,0 +1,30 @@
+.response-tables {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 1%;
+  font-size: 0.7rem;
+}
+
+.percentage-table {
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+@media (min-width: 500px) {
+  .response-tables {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .response-tables {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .response-tables {
+    font-size: 1rem;
+  }
+}

@@ -82,8 +82,9 @@ export class RecipeComponents extends Component {
   render() {
     return (
       <Fragment>
-        <AppDescription resetAll={this.resetAll} />
+        <AppDescription />
         <RecipeTable
+          resetAll={this.resetAll}
           portions={this.state.portions}
           updatePortions={this.updatePortions}
           addIngredientInput={this.addIngredientInput}
