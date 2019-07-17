@@ -1,6 +1,7 @@
 import RecipeTable from '../RecipeTable';
 
 const testProps = {
+  resetAll: () => {},
   portions: 'Test String',
   updatePortions: () => {},
   recipeText: [],

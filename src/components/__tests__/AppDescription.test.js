@@ -1,13 +1,9 @@
 import AppDescription from '../AppDescription';
 
-const testProps = {
-  resetAll: () => {}
-};
-
 describe('AppDescription component', () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<AppDescription {...testProps} />);
+    wrapper = shallow(<AppDescription />);
   });
 
   it('Should render paragraph without errors', () => {
@@ -16,19 +12,7 @@ describe('AppDescription component', () => {
   });
 
   it('Should render paragraph 2 without errors', () => {
-    const descPartTwo = findByTestAttr(wrapper, 'descPtTwoWithButton');
+    const descPartTwo = findByTestAttr(wrapper, 'descPtTwo');
     expect(descPartTwo.length).toBe(1);
-  });
-
-  it('Should render "Remove All" button without errors', () => {
-    const removeAllButton = findByTestAttr(wrapper, 'removeAll');
-    expect(removeAllButton.length).toBe(1);
-  });
-
-  describe('Checking PropTypes', () => {
-    it('Should not throw a warning', () => {
-      const propsError = checkProps(AppDescription, testProps);
-      expect(propsError).toBeUndefined();
-    });
   });
 });
