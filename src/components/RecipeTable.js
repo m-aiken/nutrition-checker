@@ -1,8 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
+import RemoveAllButton from './RemoveAllButton';
+
 class RecipeTable extends Component {
   static propTypes = {
+    resetAll: PropTypes.func.isRequired,
     portions: PropTypes.string.isRequired,
     updatePortions: PropTypes.func.isRequired,
     recipeText: PropTypes.array.isRequired,
@@ -13,15 +16,18 @@ class RecipeTable extends Component {
   render() {
     return (
       <Fragment>
+        <RemoveAllButton resetAll={this.props.resetAll} />
         <table className="table recipe-table" data-test="recipeTable">
           <thead className="thead-dark">
             <tr>
               <th scope="col">
                 Recipe
-                <span style={{ float: 'right' }}>Portions Produced:</span>
+                <span className="portions">Portions:</span>
+                <span className="portions-produced">Portions Produced:</span>
               </th>
               <th scope="col">
                 <input
+                  className="portion-number"
                   type="number"
                   value={this.props.portions}
                   onChange={this.props.updatePortions}
@@ -44,7 +50,7 @@ class RecipeTable extends Component {
                   <button
                     type="button"
                     onClick={this.props.removeIngredient(idx)}
-                    className="btn btn-danger"
+                    className="btn btn-danger remove-button"
                   >
                     Remove
                   </button>
